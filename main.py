@@ -1,22 +1,66 @@
 from pprint import pprint
 
-from app.utils.logger import log
-from app.brokers.zerodha_service import ZerodhaService
+from app.brokers.broker_service import BrokerService
+from app.market.instrument_loader import InstrumentLoader
+from app.market.instrument_repository import InstrumentRepository
 
 
 def main():
+    print("=" * 70)
+    print("AlphaEdge Pro - Module 3 Foundation")
+    print("=" * 70)
 
-    log.info("=" * 60)
-    log.info("Starting AlphaEdge Pro")
-    log.info("=" * 60)
+    # ------------------------------------------------------------------
+    # Verify Zerodha connection
+    # ------------------------------------------------------------------
 
-    broker = ZerodhaService()
+    broker = BrokerService()
 
     profile = broker.profile()
 
-    log.info("Connected successfully.\n")
+    print("\n✅ Connected to Zerodha\n")
 
-    pprint(profile)
+    pprint(
+        {
+            "User": profile.get("user_name"),
+            "User ID": profile.get("user_id"),
+            "Email": profile.get("email"),
+            "Broker": "Zerodha",
+        }
+    )
+
+    # ------------------------------------------------------------------
+    # Load instrument master
+    # ------------------------------------------------------------------
+
+    loader = InstrumentLoader()
+
+    count = loader.refresh()
+
+    print(f"\n✅ Loaded {count:,} instruments into DuckDB")
+
+    # ------------------------------------------------------------------
+    # Query instrument repository
+    # ------------------------------------------------------------------
+
+    repo = InstrumentRepository()
+
+    symbols = [
+        "RELIANCE",
+        "INFY",
+        "SBIN",
+        "ICICIBANK",
+        "TCS",
+    ]
+
+    print("\nInstrument Tokens")
+    print("-" * 70)
+
+    for symbol in symbols:
+        token = repo.get_token(symbol)
+        print(f"{symbol:<15} {token}")
+
+    print("\n✅ Module 3 Foundation completed successfully.")
 
 
 if __name__ == "__main__":
