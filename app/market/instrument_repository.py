@@ -11,6 +11,7 @@ class InstrumentRepository:
             SELECT instrument_token
             FROM instruments
             WHERE tradingsymbol = ?
+AND exchange = 'NSE'
             LIMIT 1
             """,
             [symbol],
