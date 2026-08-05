@@ -1,10 +1,14 @@
 app:
   name: AlphaEdge Pro
-  version: 2.0
+  version: 0.2.0
+
+zerodha:
+  api_key: "2lt9vzb091ralo06"
+  api_secret: "fy0arxf914v1v9g0dr4jowak3mumyv6f"
 
 database:
-  type: sqlite
-  path: data/alphaedge.db
+  type: duckdb
+  path: data/market.duckdb
 
 scanner:
   refresh_interval: 5
@@ -12,3 +16,17 @@ scanner:
 alerts:
   telegram: true
   email: false
+
+market:
+  watchlist:
+    indices:
+      - NIFTY 50
+      - NIFTY BANK
+      - INDIA VIX
+
+    equities:
+      - RELIANCE
+      - INFY
+      - SBIN
+      - ICICIBANK
+      - TCS

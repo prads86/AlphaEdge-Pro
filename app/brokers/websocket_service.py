@@ -1,21 +1,26 @@
 """
 websocket_service.py
 
-Receives live ticks from Zerodha and stores them in TickCache.
+Receives live ticks from Zerodha and forwards them to the
+MarketDataService.
 """
 
 from kiteconnect import KiteTicker
 
 from app.config.settings import KITE_API_KEY
 from app.brokers.session_manager import SessionManager
-from app.market.tick_cache import TickCache
+from app.market.market_data_service import MarketDataService
+from app.utils.logger import log
 
 
 class WebSocketService:
+    """
+    Manages the Zerodha KiteTicker WebSocket connection.
+    """
 
     def __init__(self):
 
-        self.cache = TickCache()
+        self.market = MarketDataService()
 
         access_token = SessionManager().get_access_token()
 
@@ -39,26 +44,35 @@ class WebSocketService:
 
         self.connected = True
 
-        print("✅ Connected to Zerodha WebSocket")
+        log.info("Connected to Zerodha WebSocket")
 
     def on_ticks(self, ws, ticks):
 
-        self.cache.update(ticks)
+        self.market.process_ticks(ticks)
 
-        print(
-            f"Received {len(ticks)} ticks | "
-            f"Cached: {self.cache.count}"
+        log.info(
+            "Received {} ticks | Cached Instruments: {}",
+            len(ticks),
+            self.market.cached_instruments,
         )
 
     def on_close(self, ws, code, reason):
 
         self.connected = False
 
-        print(f"WebSocket closed ({code}) {reason}")
+        log.warning(
+            "WebSocket closed | Code: {} | Reason: {}",
+            code,
+            reason,
+        )
 
     def on_error(self, ws, code, reason):
 
-        print(f"WebSocket error ({code}) {reason}")
+        log.error(
+            "WebSocket error | Code: {} | Reason: {}",
+            code,
+            reason,
+        )
 
     def subscribe(self, instrument_tokens):
 
@@ -69,6 +83,13 @@ class WebSocketService:
             instrument_tokens,
         )
 
+        log.info(
+            "Subscribed to {} instruments",
+            len(instrument_tokens),
+        )
+
     def connect(self):
+
+        log.info("Starting Zerodha WebSocket...")
 
         self.kws.connect(threaded=False)

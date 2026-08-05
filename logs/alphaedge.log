@@ -20,3 +20,65 @@
 2026-08-04 22:48:31.803 | INFO     | __main__:main:11 - ============================================================
 2026-08-04 22:48:31.933 | INFO     | __main__:main:17 - Connected successfully.
 
+2026-08-05 00:14:45 | INFO | app.market.market_data_service:clear:137 | MarketDataService reset.
+2026-08-05 00:14:45 | DEBUG | app.market.market_data_service:process_ticks:56 | Processed 1 ticks (Total: 1)
+2026-08-05 00:14:46 | DEBUG | app.market.market_data_service:process_ticks:56 | Processed 1 ticks (Total: 2)
+2026-08-05 00:16:25 | INFO | app.brokers.broker_service:_initialize:52 | BrokerService initialized successfully.
+2026-08-05 00:21:57 | INFO | app.core.market_engine:start:30 | Starting Market Engine with 5 instruments.
+2026-08-05 00:21:57 | INFO | app.brokers.websocket_service:connect:93 | Starting Zerodha WebSocket...
+2026-08-05 00:21:57 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:21:57 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:21:58 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:21:58 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:22:02 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:22:02 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:22:10 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:22:10 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 00:24:21 | INFO | app.brokers.broker_service:_initialize:52 | BrokerService initialized successfully.
+2026-08-05 00:24:21 | ERROR | app.brokers.broker_service:is_connected:126 | Broker connection failed: Incorrect `api_key` or `access_token`.
+2026-08-05 00:29:38 | INFO | app.brokers.broker_service:_initialize:52 | BrokerService initialized successfully.
+2026-08-05 00:29:46 | INFO | app.core.market_engine:start:30 | Starting Market Engine with 5 instruments.
+2026-08-05 00:29:46 | INFO | app.brokers.websocket_service:connect:93 | Starting Zerodha WebSocket...
+2026-08-05 00:29:46 | INFO | app.core.market_engine:on_connect:37 | Connected to Zerodha WebSocket
+2026-08-05 00:29:46 | INFO | app.brokers.websocket_service:subscribe:86 | Subscribed to 5 instruments
+2026-08-05 00:29:46 | DEBUG | app.market.market_data_service:process_ticks:56 | Processed 5 ticks (Total: 5)
+2026-08-05 00:29:46 | INFO | app.brokers.websocket_service:on_ticks:53 | Received 5 ticks | Cached Instruments: 5
+2026-08-05 00:30:00 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
+2026-08-05 00:30:00 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
+2026-08-05 00:31:43 | INFO | app.brokers.broker_service:_initialize:52 | BrokerService initialized successfully.
+2026-08-05 00:31:51 | INFO | app.core.market_engine:start:30 | Starting Market Engine with 5 instruments.
+2026-08-05 00:31:51 | INFO | app.brokers.websocket_service:connect:93 | Starting Zerodha WebSocket...
+2026-08-05 00:31:52 | INFO | app.core.market_engine:on_connect:37 | Connected to Zerodha WebSocket
+2026-08-05 00:31:52 | INFO | app.brokers.websocket_service:subscribe:86 | Subscribed to 5 instruments
+2026-08-05 00:31:52 | DEBUG | app.market.market_data_service:process_ticks:56 | Processed 5 ticks (Total: 5)
+2026-08-05 00:31:52 | INFO | app.brokers.websocket_service:on_ticks:53 | Received 5 ticks | Cached Instruments: 5
+2026-08-05 00:31:54 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
+2026-08-05 00:31:54 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
+2026-08-05 22:43:15 | INFO | app.core.market_engine:start:30 | Starting Market Engine with 5 instruments.
+2026-08-05 22:43:15 | INFO | app.brokers.websocket_service:connect:93 | Starting Zerodha WebSocket...
+2026-08-05 22:43:15 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:43:15 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:43:16 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:43:16 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:43:19 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:43:19 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:43:26 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:43:26 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:44:26 | INFO | app.brokers.websocket_service:connect:93 | Starting Zerodha WebSocket...
+2026-08-05 22:44:26 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:44:26 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:44:27 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:44:27 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:44:29 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:44:29 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (WebSocket connection upgrade failed (403 - Forbidden))
+2026-08-05 22:46:52 | INFO | app.brokers.broker_service:_initialize:52 | BrokerService initialized successfully.
+2026-08-05 22:46:52 | ERROR | app.brokers.broker_service:is_connected:126 | Broker connection failed: Incorrect `api_key` or `access_token`.
+2026-08-05 22:55:36 | INFO | app.core.market_engine:start:30 | Starting Market Engine with 5 instruments.
+2026-08-05 22:55:36 | INFO | app.brokers.websocket_service:connect:93 | Starting Zerodha WebSocket...
+2026-08-05 22:55:36 | INFO | app.core.market_engine:on_connect:37 | Connected to Zerodha WebSocket
+2026-08-05 22:55:36 | INFO | app.brokers.websocket_service:subscribe:86 | Subscribed to 5 instruments
+2026-08-05 22:55:36 | DEBUG | app.market.market_store:save_ticks:89 | Stored 5 live ticks.
+2026-08-05 22:55:36 | DEBUG | app.market.market_data_service:process_ticks:60 | Processed 5 ticks (Total: 5)
+2026-08-05 22:55:36 | INFO | app.brokers.websocket_service:on_ticks:53 | Received 5 ticks | Cached Instruments: 5
+2026-08-05 22:56:18 | ERROR | app.brokers.websocket_service:on_error:71 | WebSocket error | Code: 1006 | Reason: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
+2026-08-05 22:56:18 | WARNING | app.brokers.websocket_service:on_close:63 | WebSocket closed | Code: 1006 | Reason: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
